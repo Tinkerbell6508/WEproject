@@ -1,0 +1,78 @@
+/* Theme variables */
+:root{
+  --sage-1: #9dbfa3; /* lighter sage */
+  --sage-2: #7da386; /* main sage */
+  --beige-1: #f6efe6; /* soft beige */
+  --accent: #c6a478; /* warm accent (matching beige/sage) */
+  --card-shadow: rgba(30,30,30,0.08);
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Global reset + base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#213; /* deep charcoal */
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(125,163,134,0.08), transparent),linear-gradient(180deg,var(--beige-1) 0%, #efe7dd 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+/* Navigation */
+.navbar{
+  display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:14px;background: linear-gradient(135deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));box-shadow:0 6px 18px var(--card-shadow);
+}
+.nav-left{display:flex;gap:12px;align-items:center}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--sage-2)}
+.brand .logo{
+  width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--sage-2),#dfe9df);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 14px rgba(0,0,0,0.07)
+}
+.nav-links{display:flex;gap:14px}
+.nav-links a{color:#223;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+.nav-links a:hover{background:linear-gradient(90deg, rgba(125,163,134,0.12), rgba(198,164,120,0.06));}
+
+/* Hero area */
+.hero{
+  margin:28px 0;padding:46px;border-radius:18px;background:linear-gradient(160deg, rgba(157,191,163,0.14), rgba(246,239,230,0.6));display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 8px 30px rgba(20,20,20,0.04)
+}
+.hero .title{font-size:36px;font-weight:800;color:var(--sage-2);margin:0}
+.hero .subtitle{margin-top:8px;color:#445}
+.hero .actions{display:flex;gap:14px}
+.btn-large{display:inline-flex;align-items:center;gap:12px;padding:14px 20px;border-radius:12px;border:none;cursor:pointer;font-weight:700;font-size:15px;background:linear-gradient(90deg,var(--sage-2),var(--accent));color:white;box-shadow:0 8px 20px rgba(125,163,134,0.12);text-decoration:none}
+.btn-outline{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));border:1px solid rgba(160,160,160,0.08);color:#213}
+.btn-icon{width:44px;height:44px;border-radius:10px;display:inline-grid;place-items:center;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.6));box-shadow:0 6px 12px rgba(0,0,0,0.06)}
+
+/* Cards grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.75));border-radius:16px;padding:14px;box-shadow:0 8px 20px var(--card-shadow);transition:transform .18s ease, box-shadow .18s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,0.08)}
+.card .image{height:160px;border-radius:12px;background:linear-gradient(135deg,var(--sage-1),#e9e2d8);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover}
+.card h3{margin:12px 0 6px 0}
+.card p{margin:6px 0;color:#444}
+.ingredients{font-size:14px;color:#334;padding-left:10px}
+.card .card-actions{display:flex;justify-content:space-between;gap:8px;margin-top:12px}
+.small-btn{padding:8px 10px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+.small-btn.edit{background:linear-gradient(90deg,var(--sage-2),#82b282);color:white}
+.small-btn.delete{background:linear-gradient(90deg,#f28f7b,#e06b4f);color:white}
+
+/* Forms */
+.form-card{max-width:760px;margin:20px auto;padding:20px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.8));box-shadow:0 8px 20px var(--card-shadow)}
+.form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.form-row label{font-weight:700}
+.input,textarea{padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);font-size:15px}
+textarea{min-height:160px;resize:vertical}
+.form-actions{display:flex;gap:12px;justify-content:flex-end}
+
+/* Footer */
+.footer{margin-top:40px;padding:16px;text-align:center;color:#475}
+
+/* Responsive tweaks */
+@media (max-width:720px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero .title{font-size:28px}
+}

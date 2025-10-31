@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Herb & Hearth — Recipe Sharing</title>
+  <link rel="stylesheet" href="/public/style.css" />
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav-left">
+        <div class="brand">
+          <div class="logo">H&amp;H</div>
+          <div>
+            <div style="font-size:16px">Herb &amp; Hearth</div>
+            <div style="font-size:12px;color:#586">Share simple, beautiful recipes</div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/view">View Recipes</a>
+          <a href="/add">Add Recipe</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+          <a href="/feedback">Feedback</a>
+        </div>
+      </div>
+      <div>
+        <a class="btn-outline" href="/add">Add Recipe</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <h1 class="title">Herb & Hearth</h1>
+        <div class="subtitle">A warm, modern place to share your favorite home-cooked recipes.</div>
+        <div style="margin-top:18px" class="actions">
+          <button id="viewBtn" class="btn-large"><span style="font-size:20px">📖</span> View Recipes</button>
+          <button id="addBtn" class="btn-large btn-outline"><span style="font-size:20px">➕</span> Add Recipe</button>
+        </div>
+      </div>
+      <div style="max-width:360px;text-align:right">
+        <img src="/public/" alt="" style="width:100%;opacity:0.95;border-radius:12px;filter:drop-shadow(0 8px 18px rgba(0,0,0,0.06))" />
+      </div>
+    </section>
+
+    <div style="display:flex;gap:14px;margin-top:24px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+      <div style="flex:1; min-width:200px">
+        <div class="form-card">
+          <h3>Discover and share</h3>
+          <p style="margin-top:6px;color:#455">Browse community recipes or add your own. Each recipe holds ingredients, instructions and an optional image.</p>
+          <div style="margin-top:12px"><a class="btn-large" href="/view">Browse Recipes</a></div>
+        </div>
+      </div>
+      <div style="width:320px;min-width:260px">
+        <div class="form-card">
+          <h4>Quick Add</h4>
+          <p style="margin:6px 0 10px 0;color:#445">Add a recipe quickly and fill details later.</p>
+          <a class="btn-large" href="/add">Add a Recipe</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">Made with fresh herbs and good intentions 🌿</footer>
+  </div>
+  <script src="/public/main.js"></script>
+</body>
+</html>
